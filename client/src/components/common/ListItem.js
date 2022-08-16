@@ -7,22 +7,13 @@ import axios from "axios";
 
 function ListItem() {
   const [tasks, setTasks] = useState([]);
+  const [isCompleted, setIsCompleted] = useState();
 
-  const completeTodo = id => {
-    let updatedTodos = tasks.map(task => {
-      if (task.id === id) {
-        task.isComplete = !task.isComplete;
-      }
-      return task;
-    });
-    setTasks(updatedTodos);
+  const completed = () => {
+    setIsCompleted(!isCompleted);
+    updateTask(tasks._id, !isCompleted);
   };
 
-  // const newInput = () => {
-  //   if (newTask) {
-  //     insertTask({ text: newTask });
-  //   }
-  // };
   useEffect(() => {
     axios
       .get("http://localhost:44300/api/todos")
@@ -34,9 +25,18 @@ function ListItem() {
     <div className="todo">
       <form className="form">
         <div className="todo-listItems">
-          {tasks.map(t => (
-            <div key={t._id} className="todo-item">
-              <p className="item-content">{t.text}</p>
+          {tasks.map((t, index) => (
+            <div
+              key={index}
+              className={isCompleted ? "todo-item complete" : "todo-item"}
+            >
+              <p
+                key={t._id}
+                className="todo-content"
+                onClick={() => completed(t._id)}
+              >
+                {t.text}
+              </p>
               <button className="delete-item">
                 <FontAwesomeIcon
                   onClick={() => {

@@ -3,7 +3,6 @@ import { insertTask } from "../api/todo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import "../index.css";
-import axios from "axios";
 
 function AddTodo() {
   const [newTask, setNewTask] = useState("");
@@ -30,6 +29,7 @@ function AddTodo() {
             setNewTask(e.target.value);
           }}
           value={newTask}
+          required
         />
         <button type="submit" className="submitButton">
           <FontAwesomeIcon icon={faPlus} />
