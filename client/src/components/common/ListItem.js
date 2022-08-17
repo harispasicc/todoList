@@ -7,7 +7,7 @@ import axios from "axios";
 
 function ListItem() {
   const [tasks, setTasks] = useState([]);
-  const [isCompleted, setIsCompleted] = useState();
+  const [isCompleted, setIsCompleted] = useState("");
 
   const completed = () => {
     setIsCompleted(!isCompleted);
@@ -28,12 +28,14 @@ function ListItem() {
           {tasks.map((t, index) => (
             <div
               key={index}
-              className={isCompleted ? "todo-item complete" : "todo-item"}
+              className={t.isCompleted ? "todo-item complete" : "todo-item"}
             >
               <p
                 key={t._id}
                 className="todo-content"
-                onClick={() => completed(t._id)}
+                onClick={() => {
+                  completed(t._id);
+                }}
               >
                 {t.text}
               </p>

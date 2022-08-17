@@ -22,7 +22,9 @@ const insertTask = text => {
 
 const updateTask = (id, isCompleted) => {
   try {
-    return axios.put(`http://localhost:44300/api/todos/${id}`, { isCompleted });
+    return axios.put(`http://localhost:44300/api/todos/${id}`, {
+      isCompleted,
+    });
   } catch (error) {
     console.log(error);
   }
