@@ -3,6 +3,11 @@ import axios from "axios";
 
 // const apiUrl = config.apiPath;
 
+const headers = {
+  "Content-Type": "application/json",
+  Accept: "application/json",
+};
+
 const listTasks = async () => {
   try {
     const res = await axios.get("http://localhost:44300/api/todos");
@@ -20,15 +25,16 @@ const insertTask = text => {
   }
 };
 
-const updateTask = (id, isCompleted) => {
-  try {
-    return axios.put(`http://localhost:44300/api/todos/${id}`, {
-      isCompleted,
-    });
-  } catch (error) {
-    console.log(error);
-  }
-};
+// const updateTask = (id, isCompleted) => {
+//   axios
+//     .put(`http://localhost:44300/api/todos/${id}`, isCompleted, {
+//       headers,
+//     })
+//     .then(response => response.data)
+//     .catch(reason => {
+//       console.log(reason);
+//     });
+// };
 
 const remove = async id => {
   try {
@@ -39,4 +45,4 @@ const remove = async id => {
   }
 };
 
-export { insertTask, listTasks, remove, updateTask };
+export { insertTask, listTasks, remove };
