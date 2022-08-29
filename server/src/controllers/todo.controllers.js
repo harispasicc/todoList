@@ -23,6 +23,7 @@ const list = (req, res) => {
 const update = (req, res) => {
   const id = req.params.id;
   const isCompleted = req.body.isCompleted;
+  console.log(req.body);
   if (id) {
     Todo.findByIdAndUpdate(id, { isCompleted }, function (err, docs) {
       if (err) {
