@@ -32,9 +32,8 @@ Footer.js with Paragon rights
 Styling done with CSS index.css and fontawesome for icons
 
 mobile-todo-screenshot:
-![](../../mobile-todo2.PNG)
-![](../../mobile-todo1.PNG)
-
+![](mobile-todo1.PNG)
+![](mobile-todo2.PNG)
 tablet-todo-screenshot:
 ![](../../tablet-todo1.PNG)
 ![](../../tablet-todo.PNG)
