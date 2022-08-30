@@ -31,6 +31,18 @@ Footer.js with Paragon rights
 
 Styling done with CSS index.css and fontawesome for icons
 
+mobile-todo-screenshot:
+![](../../mobile-todo2.PNG)
+![](../../mobile-todo1.PNG)
+
+tablet-todo-screenshot:
+![](../../tablet-todo1.PNG)
+![](../../tablet-todo.PNG)
+
+desktop-todo-screenshot:
+![](../../desktop-todo1.PNG)
+![](../../desktop-todo.PNG)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
