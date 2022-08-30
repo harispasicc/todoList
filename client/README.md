@@ -1,3 +1,36 @@
+TO-DO LIST
+
+Project features:
+
+-Config Variables:
+config.js with envBackendUrl called from .env
+
+-Assets Folder:
+image for header
+
+-Backend API integration:
+todo.js with CRUD API using axios
+
+-Components:
+index.js
+
+App.js with Todo.js
+
+Todo.js with Header, AddTodo, List, Footer
+
+Header.js with image and project name
+
+AddTodo.js with one input and button with label + and bottom shadow
+
+List.js with ListItem.js imported
+
+ListItem.js calling remove, update and list from todo.js and maping them
+to list all todos
+
+Footer.js with Paragon rights
+
+Styling done with CSS index.css and fontawesome for icons
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
